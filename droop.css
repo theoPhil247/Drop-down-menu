@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.dropdown-menu ul{
+    list-style: none;
+    font-size: 1rem;
+}
+.dropdown-menu{
+    position: relative;
+    display: inline-block;
+    height: 45px;
+    width: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    line-height: 45px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #045f9b;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    top: 100px;
+    font-weight: 1rem;
+}
+.dropdown{
+    position: absolute;
+    width: 200px;
+    color: #000;
+}
+.dropdown li{
+    display: none;
+    opacity: 0;
+    background-color: #fff;
+    transition: color .3s;
+}
+.dropdown li:hover{
+    color: #fff;
+    background-color: #007ACC;
+    align-items: center;
+}
+.dropdown-menu:hover .dropdown li{
+    display: block;
+    animation: menu1 .5s forwards;
+}
+@keyframes animation{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.dropdown-menu .dropdown li:nth-last-child(1){
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.dropdown-menu:hover .dropdown li:nth-child(2){
+    animation-delay: 1s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(3){
+    animation-delay: 2s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(4){
+    animation-delay: 3s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(5){
+    animation-delay: 4s;
+}
+.dropdown-menu:hover .dropdown li{
+    animation: animation .4s forwards;
+}
